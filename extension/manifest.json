@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "LeetHint",
+  "version": "1.0",
+  "description": "AI-powered LeetCode hints using Gemini API",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://leetcode.com/problems/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "minimum_chrome_version": "96"
+}
